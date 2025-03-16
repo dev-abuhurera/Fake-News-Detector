@@ -1,4 +1,5 @@
 Fake News Detector
+
 This project is an AI-based model that can detect whether a news article is fake or real using machine learning. The project includes a Flask-based web interface for user interaction.
 
 What You Need
