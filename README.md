@@ -42,7 +42,7 @@ pip install -r requirements.txt
 (This will install all required libraries automatically.)
 
 4. Download the Required Model
-⚠️ The project uses spaCy for text processing. If you haven’t installed the necessary language model, run:
+   The project uses spaCy for text processing. If you haven’t installed the necessary language model, run:
 
 bash...
 
@@ -51,7 +51,7 @@ python -m spacy download en_core_web_sm
 (This will download the required NLP model.)
 
 5. Run the Application
-📌 Start training the model by running:
+  Start training the model by running:
 
 bash
 
@@ -61,23 +61,23 @@ python fake_news_detector.py --true path/to/True.csv --fake path/to/Fake.csv
 (Replace path/to/True.csv and path/to/Fake.csv with actual file paths.)
 
 6. Open the Web App
-🌍 Use a web browser to access the interface and enter news text.
+    Use a web browser to access the interface and enter news text.
 
-7. Use the Model
-📝 Enter or upload a news article.
-🔘 Click the Predict button.
-🤖 The model will classify the news as Fake or Real.
+8. Use the Model
+  Enter or upload a news article.
+  Click the Predict button.
+  The model will classify the news as Fake or Real.
 
-8. (Optional) Train the Model Again
-💡 You can retrain the model using different datasets if needed.
-📌 The trained model and vectorizer are saved in:
+9. (Optional) Train the Model Again
+  You can retrain the model using different datasets if needed.
+  The trained model and vectorizer are saved in:
 
 fake_news_model.pkl
 vectorizer.pkl
 If you want to retrain the model, simply delete these files and rerun the training command.
 
 9. Close the Environment After Use
-💡 If you used a virtual environment, deactivate it when you’re done:
+  If you used a virtual environment, deactivate it when you’re done:
 
 bash
 Copy code
