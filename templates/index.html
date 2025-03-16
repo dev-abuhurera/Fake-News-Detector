@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    
+    <!-- Dynamic CSS Path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Fake News Detector</h1>
+    <form id="news-form">
+        <textarea id="news-text" name="news_text" placeholder="Enter news text here..."></textarea>
+        <button type="submit">Check</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("news-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let text = document.getElementById("news-text").value;
+
+            fetch('/predict', {
+                method: 'POST',
+                body: new URLSearchParams({ 'news_text': text }),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerText = "Prediction: " + data.prediction;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
