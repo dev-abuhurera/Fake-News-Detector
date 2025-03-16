@@ -21,11 +21,17 @@ def preprocess_text_spacy(text):
     return " ".join(tokens)
 
 # Get absolute paths dynamically
-base_dir = os.path.abspath(r"D:\Abuhurera data\Courses\PYTHON\Python projects\fake_news_detector.py")
+base_dir = os.path.dirname(os.path.abspath(__file__))
 true_path = os.path.join(base_dir, "True.csv")
 fake_path = os.path.join(base_dir, "Fake.csv")
 model_path = os.path.join(base_dir, "fake_news_model.pkl")
 vectorizer_path = os.path.join(base_dir, "vectorizer.pkl")
+
+for path in [true_path, fake_path, model_path, vectorizer_path]:
+    if os.path.exists(path):
+        print(f"File exists: {path}")
+    else:
+        print(f"File does not exist: {path}")
 
 # Load datasets
 true = pd.read_csv(true_path)
