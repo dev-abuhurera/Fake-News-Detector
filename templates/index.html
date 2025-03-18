@@ -10,28 +10,49 @@
 </head>
 
 <body>
-    <h1>Fake News Detector</h1>
-    <form id="news-form">
-        <textarea id="news-text" name="news_text" placeholder="Enter news text here..."></textarea>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <h1>FAKE NEWS DETECTOR</h1>
+    </div>
+
+    <!-- Form Container -->
+    <form id="news-form" action="/predict" method="POST">
+        <textarea id="news-text" name="news" placeholder="Enter news text here..." required></textarea>
         <button type="submit">Check</button>
     </form>
+    
+    <!-- Display Prediction -->
     <p id="result"></p>
+    
+    <!-- Display Errors -->
+    <p id="error"></p>
 
     <script>
         document.getElementById("news-form").addEventListener("submit", function(event) {
             event.preventDefault();
             let text = document.getElementById("news-text").value;
 
+            // Clear previous results and errors
+            document.getElementById("result").innerText = "";
+            document.getElementById("error").innerText = "";
+
             fetch('/predict', {
                 method: 'POST',
-                body: new URLSearchParams({ 'news_text': text }),
+                body: new URLSearchParams({ 'news': text }),  // Match the Flask backend's expected key
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById("result").innerText = "Prediction: " + data.prediction;
+                if (data.error) {
+                    document.getElementById("error").innerText = "Error: " + data.error;
+                } else {
+                    document.getElementById("result").innerText = "Prediction: " + data.prediction;
+                }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("error").innerText = "An error occurred. Please try again.";
+            });
         });
     </script>
 </body>

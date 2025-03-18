@@ -1,52 +1,208 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* General Styles */
+:root {
+    --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+    --jet: hsl(0, 0%, 22%);
+    --onyx: hsl(240, 1%, 17%);
+    --eerie-black-1: hsl(240, 2%, 13%);
+    --eerie-black-2: hsl(240, 2%, 12%);
+    --smoky-black: hsl(0, 0%, 7%);
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 98%);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+    --light-gray: hsl(0, 0%, 84%);
+    --light-gray-70: hsla(0, 0%, 84%, 0.7);
+    --darkish-yellow: hsl(45, 70%, 50%); /* Darkish yellow for error block */
+    --ff-poppins: "Poppins", sans-serif;
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 16px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+    --fs-7: 13px;
+    --fs-8: 11px;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: var(--ff-poppins);
+    background: var(--bg-gradient-jet);
+    color: var(--white-1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    width: 100%;
+    background: var(--eerie-black-1); /* Dark background for the top bar */
+    padding: 20px;
     text-align: center;
-    padding: 20px;
+    box-shadow: var(--shadow-2);
+    position: fixed; /* Fix the top bar to the top */
+    top: 0; /* Move it to the top */
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
-/* Main Container */
-h1 {
-    color: #333;
+.top-bar h1 {
+    font-size: 2.5rem; /* Large text size */
+    font-weight: var(--fw-600);
+    background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); /* Yellow gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--shadow-1);
+    margin: 0;
 }
 
+/* Yellow Accent Block for Top Bar */
+.top-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); /* Yellow gradient */
+    border-radius: 12px 0 0 12px;
+}
+
+/* Form Container */
 form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    margin-top: 20px;
+    background: var(--eerie-black-1); /* Black background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-2);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    margin-top: 150px; /* Increased margin to move the search block lower */
 }
 
+/* Yellow Accent Block at the Front */
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); /* Yellow gradient */
+    border-radius: 12px 0 0 12px;
+}
+
+/* Textarea Styles */
 textarea {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    height: 150px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid var(--light-gray-70);
+    border-radius: 8px;
+    font-size: var(--fs-4);
+    background: var(--eerie-black-2);
+    color: var(--white-1);
+    resize: vertical;
+    transition: border-color var(--transition-1), background var(--transition-1);
 }
 
+textarea:focus {
+    border-color: var(--orange-yellow-crayola);
+    background: var(--jet);
+    outline: none;
+}
+
+/* Button Styles */
 button {
-    background: #007BFF;
-    color: white;
-    padding: 10px 20px;
+    background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); /* Yellow gradient */
+    color: var(--smoky-black);
+    padding: 12px 24px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    transition: transform var(--transition-1), box-shadow var(--transition-1);
 }
 
 button:hover {
-    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-3);
 }
 
-/* Result Styling */
-#result {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
+button:active {
+    transform: translateY(0);
+}
+
+/* Prediction Result Box */
+#prediction-result {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); /* Yellow gradient */
+    color: var(--smoky-black);
+    box-shadow: var(--shadow-2);
+    border: 2px solid var(--orange-yellow-crayola); /* Yellow border */
+}
+
+/* Error Styles */
+#error {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-500);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    background: var(--darkish-yellow); /* Darkish yellow for error block */
+    color: var(--smoky-black);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .top-bar h1 {
+        font-size: 2rem; /* Smaller text size for mobile */
+    }
+
+    form {
+        padding: 20px;
+        margin-top: 120px; /* Adjust margin for smaller screens */
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    button {
+        width: 100%;
+    }
 }

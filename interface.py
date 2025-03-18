@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import joblib
 import spacy
 import re
@@ -20,18 +20,27 @@ vectorizer = joblib.load("vectorizer.pkl")
 
 # Initialize Flask app
 app = Flask(__name__)
+app.secret_key = "26f1f696e7b8735398380ef1ed7c04a0f3462d850410c2c4"
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
-    prediction = None
-    if request.method == "POST":
+    return render_template("index.html")  # Render the main page
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    try:
         news_text = request.form["news"]
+        if not news_text.strip():
+            return jsonify({"error": "Please enter some text."})
+
         cleaned_text = preprocess_text(news_text)
         transformed_text = vectorizer.transform([cleaned_text])
         prediction = model.predict(transformed_text)[0]
         prediction = "Real News" if prediction == 1 else "Fake News"
 
-    return render_template("index.html", prediction=prediction)
+        return jsonify({"prediction": prediction})
+    except Exception as e:
+        return jsonify({"error": str(e)})
 
 if __name__ == "__main__":
     app.run(debug=True)
