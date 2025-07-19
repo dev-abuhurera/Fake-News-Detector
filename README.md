@@ -90,6 +90,8 @@ pip install -r requirements.txt
 # Download NLP model
 python -m spacy download en_core_web_sm
 
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
+
 🚀 Usage
 Training the Model
 python fake_news_detector.py \
@@ -106,7 +108,7 @@ flask run --host=0.0.0.0 --port=5000
 
 
 📂 Project Structure
-<div>
+<div style = "align=center">
 fake-news-detector/
 ├── app.py                # Flask application
 ├── fake_news_detector.py # Core training script
@@ -125,7 +127,9 @@ fake-news-detector/
     ├── fake_news_model.pkl
     └── vectorizer.pkl
     </div>
-    
+
+
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
 
 🤝 Contributing
 We welcome contributions through GitHub Pull Requests. Please:
@@ -141,6 +145,7 @@ Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
 
 ✉️ Contact
 Muhammad Abuhurera
