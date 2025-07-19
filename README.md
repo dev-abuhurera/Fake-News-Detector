@@ -1,35 +1,50 @@
 # 🚨 Fake News Detector - AI-Powered Misinformation Identification System
 
-<img width="1153" height="433" alt="image" src="https://github.com/user-attachments/assets/32c44c73-e6f8-42be-b2df-3b1e03dcca7a" />
- <!-- Replace with actual banner -->
+![Project Banner](https://github.com/user-attachments/assets/32c44c73-e6f8-42be-b2df-3b1e03dcca7a)
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
-[![Flask](https://img.shields.io/badge/flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/dev-abuhurera/fake-news-detector/pulls)
+<div align="center">
+  <a href="https://github.com/dev-abuhurera/fake-news-detector/stargazers">
+    <img src="https://img.shields.io/github/stars/dev-abuhurera/fake-news-detector?style=for-the-badge&color=7d40ff" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/dev-abuhurera/fake-news-detector/issues">
+    <img src="https://img.shields.io/github/issues/dev-abuhurera/fake-news-detector?style=for-the-badge&color=7d40ff" alt="GitHub Issues">
+  </a>
+  <a href="https://github.com/dev-abuhurera/fake-news-detector/network/members">
+    <img src="https://img.shields.io/github/forks/dev-abuhurera/fake-news-detector?style=for-the-badge&color=7d40ff" alt="GitHub Forks">
+  </a>
+</div>
 
 ## 🌟 Key Features
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,flask,docker,aws,githubactions" alt="Tech Stack" style="height: 40px; margin: 10px 0;"/>
+<div align="center" style="margin: 20px 0;">
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,flask,docker,aws,githubactions" alt="Tech Stack" style="height: 45px;"/>
 </div>
 
-- **Advanced NLP Pipeline** with spaCy for text preprocessing
-- **Dual Dataset Integration** (True.csv and Fake.csv)
-- **TF-IDF Vectorization** with optimized feature extraction
-- **Random Forest Classifier** with anti-overfitting measures
-- **Production-Ready Web Interface** built with Flask
-- **Model Persistence** using joblib serialization
-- **Customizable Training** with command-line arguments
+<div style="columns: 2; column-gap: 20px; margin: 20px 0;">
+  
+✔ **Advanced NLP Pipeline** with spaCy text preprocessing  
+✔ **Dual Dataset Integration** (True.csv and Fake.csv)  
+✔ **TF-IDF Vectorization** with optimized feature extraction  
+✔ **Random Forest Classifier** with anti-overfitting measures  
+✔ **Production-Ready Web Interface** built with Flask  
+✔ **Model Persistence** using joblib serialization  
+✔ **Customizable Training** via CLI arguments  
+✔ **Explainable AI** with confidence scores  
+
+</div>
 
 ## 📊 Performance Metrics
 
-| Metric        | Score   | Improvement |
-|--------------|---------|-------------|
-| Accuracy     | 92.4%   | +7.2%       |
-| Precision    | 91.8%   | +6.5%       |
-| Recall       | 93.1%   | +8.1%       |
-| F1-Score     | 92.4%   | +7.3%       |
+<div align="center" style="margin: 20px auto; max-width: 600px;">
+
+| Metric        | Score   | Improvement | Visual |
+|--------------|---------|-------------|--------|
+| Accuracy     | 92.4%   | +7.2%       | ▰▰▰▰▰▰▰▰▰▰ |
+| Precision    | 91.8%   | +6.5%       | ▰▰▰▰▰▰▰▰▰  |
+| Recall       | 93.1%   | +8.1%       | ▰▰▰▰▰▰▰▰▰▰ |
+| F1-Score     | 92.4%   | +7.3%       | ▰▰▰▰▰▰▰▰▰▰ |
+
+</div>
 
 ## 🛠️ Installation Guide
 
@@ -39,6 +54,7 @@
 - Virtual environment (recommended)
 
 ### Quick Start
+
 
 # Clone repository
 git clone https://github.com/dev-abuhurera/fake-news-detector.git
@@ -57,65 +73,19 @@ python -m spacy download en_core_web_sm
 
 🚀 Usage
 Training the Model
-
-bash
 python fake_news_detector.py \
   --true datasets/True.csv \
   --fake datasets/Fake.csv \
   --test_size 0.2 \
   --random_state 42
-  
+
 Running the Web Interface
-bash
 flask run --host=0.0.0.0 --port=5000
-Access the web interface at: http://localhost:5000
-
-🧠 Model Architecture
 
 
 
+🖥️ Interface Preview
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;"> <img src="https://github.com/user-attachments/assets/32c44c73-e6f8-42be-b2df-3b1e03dcca7a" width="45%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(125, 64, 255, 0.2);"/> <img src="https://github.com/user-attachments/assets/b2e88c02-145d-40ee-b7d0-65a48548cf75" width="45%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(125, 64, 255, 0.2);"/> </div>
 
 
 
-<img width="351" height="534" alt="image" src="https://github.com/user-attachments/assets/b2e88c02-145d-40ee-b7d0-65a48548cf75" />
-
-
-
-
-
-📂 Project Structure
-text
-fake-news-detector/
-├── app.py                # Flask application
-├── fake_news_detector.py # Core training script
-├── interface.py          # Prediction logic
-├── requirements.txt      # Dependencies
-├── datasets/
-│   ├── True.csv          # Real news samples
-│   └── Fake.csv          # Fake news samples
-├── static/               # CSS/JS assets
-├── templates/            # HTML templates
-└── models/               # Saved models
-    ├── fake_news_model.pkl
-    └── vectorizer.pkl
-
-    
-🤝 Contributing
-We welcome contributions! Please follow these steps:
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-
-
-✉️ Contact
-Muhammad Abuhurera - abuhurerarchani@gmail.com
-
-Project Link: https://github.com/dev-abuhurera/fake-news-detector
