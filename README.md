@@ -71,6 +71,12 @@ flask run --host=0.0.0.0 --port=5000
 Access the web interface at: http://localhost:5000
 
 🧠 Model Architecture
+
+
+
+
+
+
 <img width="351" height="534" alt="image" src="https://github.com/user-attachments/assets/b2e88c02-145d-40ee-b7d0-65a48548cf75" />
 
 
