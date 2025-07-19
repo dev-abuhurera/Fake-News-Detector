@@ -54,27 +54,24 @@ pip install -r requirements.txt
 
 # Download NLP model
 python -m spacy download en_core_web_sm
+
 🚀 Usage
 Training the Model
+
 bash
 python fake_news_detector.py \
   --true datasets/True.csv \
   --fake datasets/Fake.csv \
   --test_size 0.2 \
   --random_state 42
+  
 Running the Web Interface
 bash
 flask run --host=0.0.0.0 --port=5000
 Access the web interface at: http://localhost:5000
 
 🧠 Model Architecture
-graph TD
-    A[Raw Text Input] --> B[Text Preprocessing]
-    B --> C[TF-IDF Vectorization]
-    C --> D[Random Forest Classifier]
-    D --> E[Prediction: Fake/Real]
-    E --> F[Confidence Score]
-
+<img width="351" height="534" alt="image" src="https://github.com/user-attachments/assets/b2e88c02-145d-40ee-b7d0-65a48548cf75" />
 
 
 
@@ -95,6 +92,8 @@ fake-news-detector/
 └── models/               # Saved models
     ├── fake_news_model.pkl
     └── vectorizer.pkl
+
+    
 🤝 Contributing
 We welcome contributions! Please follow these steps:
 
@@ -108,10 +107,9 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
+
 
 ✉️ Contact
-Muhammad Abuhurera - @yourtwitter - abuhurerarchani@gmail.com
+Muhammad Abuhurera - abuhurerarchani@gmail.com
 
 Project Link: https://github.com/dev-abuhurera/fake-news-detector
