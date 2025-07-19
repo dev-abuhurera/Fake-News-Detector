@@ -67,11 +67,13 @@ bash
 flask run --host=0.0.0.0 --port=5000
 Access the web interface at: http://localhost:5000
 
-🖥️ Web Interface Preview
-<div align="center"> <img src="https://via.placeholder.com/600x350/282a36/7d40ff?text=Analysis+Dashboard" width="45%" alt="Dashboard"/> <img src="https://via.placeholder.com/600x350/282a36/7d40ff?text=Results+View" width="45%" alt="Results"/> </div>
 🧠 Model Architecture
-Diagram
-Code
+graph TD
+    A[Raw Text Input] --> B[Text Preprocessing]
+    B --> C[TF-IDF Vectorization]
+    C --> D[Random Forest Classifier]
+    D --> E[Prediction: Fake/Real]
+    E --> F[Confidence Score]
 
 
 
