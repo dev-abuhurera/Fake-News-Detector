@@ -90,7 +90,10 @@ pip install -r requirements.txt
 # Download NLP model
 python -m spacy download en_core_web_sm
 
-<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/240304586-218f11fa-42f4-4af1-9e0a-a2a8e8a7f4e9.gif" width="100%" height="2px"/>
+</div>
 
 🚀 Usage
 Training the Model
@@ -104,8 +107,10 @@ Running the Web Interface
 flask run --host=0.0.0.0 --port=5000
 
 
-<img width="245" height="755" alt="image" src="https://github.com/user-attachments/assets/f6bc6e8e-448b-4269-b962-c60f5ab9dca3" />
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/240304586-218f11fa-42f4-4af1-9e0a-a2a8e8a7f4e9.gif" width="100%" height="2px"/>
+</div>
 
 📂 Project Structure
 <div style = "align=center">
@@ -129,7 +134,11 @@ fake-news-detector/
     </div>
 
 
-<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/240304586-218f11fa-42f4-4af1-9e0a-a2a8e8a7f4e9.gif" width="100%" height="2px"/>
+</div>
+
 
 🤝 Contributing
 We welcome contributions through GitHub Pull Requests. Please:
