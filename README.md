@@ -3,6 +3,10 @@
 ![Project Banner](https://github.com/user-attachments/assets/32c44c73-e6f8-42be-b2df-3b1e03dcca7a)
 
 <div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/240304586-218f11fa-42f4-4af1-9e0a-a2a8e8a7f4e9.gif" width="100%" height="2px"/>
+</div>
+
+<div align="center">
   <a href="https://github.com/dev-abuhurera/fake-news-detector/stargazers">
     <img src="https://img.shields.io/github/stars/dev-abuhurera/fake-news-detector?style=for-the-badge&color=7d40ff" alt="GitHub Stars">
   </a>
@@ -12,6 +16,10 @@
   <a href="https://github.com/dev-abuhurera/fake-news-detector/network/members">
     <img src="https://img.shields.io/github/forks/dev-abuhurera/fake-news-detector?style=for-the-badge&color=7d40ff" alt="GitHub Forks">
   </a>
+</div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/240304586-218f11fa-42f4-4af1-9e0a-a2a8e8a7f4e9.gif" width="100%" height="2px"/>
 </div>
 
 ## 🌟 Key Features
@@ -33,6 +41,10 @@
 
 </div>
 
+<div align="center">
+  <hr style="border: 1px dashed #7d40ff; width: 80%; margin: 20px 0;">
+</div>
+
 ## 📊 Performance Metrics
 
 <div align="center" style="margin: 20px auto; max-width: 600px;">
@@ -46,6 +58,12 @@
 
 </div>
 
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=7d40ff&height=30&section=divider"/>
+</div>
+
+
 ## 🛠️ Installation Guide
 
 ### Prerequisites
@@ -53,8 +71,9 @@
 - pip package manager
 - Virtual environment (recommended)
 
-### Quick Start
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=30&section=divider"/> </div>
 
+### Quick Start
 
 # Clone repository
 git clone https://github.com/dev-abuhurera/fake-news-detector.git
@@ -83,9 +102,52 @@ Running the Web Interface
 flask run --host=0.0.0.0 --port=5000
 
 
+<img width="245" height="755" alt="image" src="https://github.com/user-attachments/assets/f6bc6e8e-448b-4269-b962-c60f5ab9dca3" />
 
-🖥️ Interface Preview
-<div align="center" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;"> <img src="https://github.com/user-attachments/assets/32c44c73-e6f8-42be-b2df-3b1e03dcca7a" width="45%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(125, 64, 255, 0.2);"/> <img src="https://github.com/user-attachments/assets/b2e88c02-145d-40ee-b7d0-65a48548cf75" width="45%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(125, 64, 255, 0.2);"/> </div>
+
+📂 Project Structure
+<div>
+fake-news-detector/
+├── app.py                # Flask application
+├── fake_news_detector.py # Core training script
+├── interface.py          # Prediction logic
+├── requirements.txt      # Dependencies
+├── datasets/
+│   ├── True.csv          # Real news samples
+│   └── Fake.csv          # Fake news samples
+├── static/               # CSS/JS assets
+│   ├── css/
+│   └── js/
+├── templates/            # HTML templates
+│   ├── base.html
+│   └── index.html
+└── models/               # Saved models
+    ├── fake_news_model.pkl
+    └── vectorizer.pkl
+    </div>
+    
+
+🤝 Contributing
+We welcome contributions through GitHub Pull Requests. Please:
+
+Fork the repository
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some amazing feature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+
+
+✉️ Contact
+Muhammad Abuhurera
+📧 abuhurerarchani@gmail.com
+🌐 GitHub Profile
+
+
 
 
 
