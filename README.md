@@ -59,9 +59,7 @@
 </div>
 
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=wave&color=7d40ff&height=30&section=divider"/>
-</div>
+
 
 
 ## 🛠️ Installation Guide
